@@ -1,0 +1,6 @@
+{
+  "name": "Personal Portfolio",
+  "description": "A highly customizable personal portfolio website featuring a dark layout, sidebar navigation, custom image backgrounds, interactive content editing, and sections for About, Services, Resume, Portfolio projects, Testimonials, and Contact.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
