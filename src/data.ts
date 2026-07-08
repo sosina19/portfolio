@@ -10,7 +10,7 @@ export const defaultPortfolioData: PortfolioData = {
       "TypeScript Specialist"
     ],
     location: "Ethiopia",
-    avatarUrl: "/src/assets/images/sosina_avatar_original_1782840466559.jpg",
+    avatarUrl: "/src/assets/images/ssssssssssssss.jpg",
     bgUrl: "/src/assets/images/portfolio_bg_1782834706463.jpg",
     aboutMeText: "I'm a Software Engineering student who enjoys building modern, user-friendly web applications that solve real-world problems. I have a strong interest in frontend development and creating responsive websites that look great and perform well across all devices.\n\nThrough personal projects and continuous learning, I've gained experience working with technologies like HTML, CSS, JavaScript, React, Tailwind CSS, Node.js, and modern development tools. I enjoy turning ideas into functional products, or exploring new web technologies.\n\nI'm always looking to improve my skills by taking on challenging projects, learning industry best practices, and staying up to date with modern software development. My goal is to build software that is not only visually appealing but also fast, accessible, maintainable, and meaningful for the people who use it.",
     yearsOfExperience: 2,

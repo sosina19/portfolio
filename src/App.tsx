@@ -23,7 +23,7 @@ export default function App() {
         const parsed = JSON.parse(saved) as PortfolioData;
         // Automatically use the newly uploaded avatar image
         if (parsed && parsed.profile) {
-          parsed.profile.avatarUrl = "/src/assets/images/sosina_avatar_original_1782840466559.jpg";
+          parsed.profile.avatarUrl = "/src/assets/images/ssssssssssssss.jpg";
         }
         // Filter out facebook, twitter, and dribbble from contact socials
         if (parsed && parsed.contactInfo && parsed.contactInfo.socials) {
