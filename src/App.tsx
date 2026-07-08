@@ -10,7 +10,6 @@ import ServicesSection from './components/ServicesSection';
 import ResumeSection from './components/ResumeSection';
 import PortfolioSection from './components/PortfolioSection';
 import ContactSection from './components/ContactSection';
-import EditPanel from './components/EditPanel';
 
 const LOCAL_STORAGE_KEY_DATA = 'portfolio_data_v1';
 const LOCAL_STORAGE_KEY_MESSAGES = 'user_messages_v1';
@@ -72,7 +71,6 @@ export default function App() {
   });
 
   const [activeSection, setActiveSection] = useState('home');
-  const [isEditOpen, setIsEditOpen] = useState(false);
 
   // Sync state changes to local storage
   useEffect(() => {
@@ -155,7 +153,6 @@ export default function App() {
         contactInfo={portfolioData.contactInfo}
         activeSection={activeSection}
         onSectionClick={handleScrollToSection}
-        onToggleEdit={() => setIsEditOpen(true)}
       />
 
       {/* 2. Right Main Sequential Scrolling Canvas */}
@@ -193,16 +190,7 @@ export default function App() {
 
       </main>
 
-      {/* 3. Sliding Customize drawer panel (z-index 50) */}
-      <EditPanel
-        isOpen={isEditOpen}
-        onClose={() => setIsEditOpen(false)}
-        data={portfolioData}
-        onChange={setPortfolioData}
-        onReset={handleResetData}
-        messages={messages}
-        onClearMessages={handleClearMessages}
-      />
+
 
     </div>
   );

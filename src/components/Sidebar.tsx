@@ -9,9 +9,7 @@ import {
   Cpu,
   FileText,
   Briefcase,
-  MessageSquare,
-  Mail,
-  Settings
+  Mail
 } from 'lucide-react';
 import { Profile, ContactInfo } from '../types';
 
@@ -20,15 +18,13 @@ interface SidebarProps {
   contactInfo: ContactInfo;
   activeSection: string;
   onSectionClick: (sectionId: string) => void;
-  onToggleEdit: () => void;
 }
 
 export default function Sidebar({
   profile,
   contactInfo,
   activeSection,
-  onSectionClick,
-  onToggleEdit
+  onSectionClick
 }: SidebarProps) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -61,16 +57,6 @@ export default function Sidebar({
         aria-label="Toggle navigation"
       >
         {isOpen ? <X size={20} /> : <Menu size={20} />}
-      </button>
-
-      {/* Floating Customize Toggle Button */}
-      <button
-        id="desktop-customize-toggle"
-        onClick={onToggleEdit}
-        className="fixed bottom-6 right-6 z-40 flex items-center gap-2 px-4 py-3 bg-[#20c997] hover:bg-[#1baa80] text-[#111418] font-semibold rounded-full shadow-xl transition-all duration-300 hover:scale-105 active:scale-95 group focus:outline-none"
-      >
-        <Settings size={18} className="animate-spin-slow group-hover:rotate-45 transition-transform duration-500" />
-        <span className="text-sm">Customize Portfolio</span>
       </button>
 
       {/* Sidebar Overlay for Mobile Drawer */}
