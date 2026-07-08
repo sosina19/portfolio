@@ -2,6 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { PortfolioData, UserMessage } from './types';
 import { defaultPortfolioData } from './data';
 
+// Images
+import ssssssssssssss from './assets/images/ssssssssssssss.jpg';
+import qr_attendance from './assets/images/qr_attendance_1782838206108.jpg';
+import hotel_menu from './assets/images/hotel_menu_1782838219123.jpg';
+import marketing_platform from './assets/images/marketing_platform_1782838233661.jpg';
+import youtube_clone from './assets/images/youtube_clone_1782838247057.jpg';
+
 // Components
 import Sidebar from './components/Sidebar';
 import HomeSection from './components/HomeSection';
@@ -23,7 +30,7 @@ export default function App() {
         const parsed = JSON.parse(saved) as PortfolioData;
         // Automatically use the newly uploaded avatar image
         if (parsed && parsed.profile) {
-          parsed.profile.avatarUrl = "/src/assets/images/ssssssssssssss.jpg";
+          parsed.profile.avatarUrl = ssssssssssssss;
         }
         // Filter out facebook, twitter, and dribbble from contact socials
         if (parsed && parsed.contactInfo && parsed.contactInfo.socials) {
@@ -36,16 +43,16 @@ export default function App() {
           parsed.projects = parsed.projects.map((project) => {
             const titleLower = project.title.toLowerCase();
             if (titleLower.includes('attendance') || titleLower.includes('qr')) {
-              return { ...project, imageUrl: '/src/assets/images/qr_attendance_1782838206108.jpg' };
+              return { ...project, imageUrl: qr_attendance };
             }
             if (titleLower.includes('menu') || titleLower.includes('hotel') || titleLower.includes('food')) {
-              return { ...project, imageUrl: '/src/assets/images/hotel_menu_1782838219123.jpg' };
+              return { ...project, imageUrl: hotel_menu };
             }
             if (titleLower.includes('marketing') || titleLower.includes('seo') || titleLower.includes('platform')) {
-              return { ...project, imageUrl: '/src/assets/images/marketing_platform_1782838233661.jpg' };
+              return { ...project, imageUrl: marketing_platform };
             }
             if (titleLower.includes('youtube') || titleLower.includes('video') || titleLower.includes('clone')) {
-              return { ...project, imageUrl: '/src/assets/images/youtube_clone_1782838247057.jpg' };
+              return { ...project, imageUrl: youtube_clone };
             }
             return project;
           });

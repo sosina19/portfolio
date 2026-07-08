@@ -1,4 +1,10 @@
 import { PortfolioData } from './types';
+import ssssssssssssss from './assets/images/ssssssssssssss.jpg';
+import portfolio_bg from './assets/images/portfolio_bg_1782834706463.jpg';
+import qr_attendance from './assets/images/qr_attendance_1782838206108.jpg';
+import hotel_menu from './assets/images/hotel_menu_1782838219123.jpg';
+import marketing_platform from './assets/images/marketing_platform_1782838233661.jpg';
+import youtube_clone from './assets/images/youtube_clone_1782838247057.jpg';
 
 export const defaultPortfolioData: PortfolioData = {
   profile: {
@@ -10,8 +16,8 @@ export const defaultPortfolioData: PortfolioData = {
       "TypeScript Specialist"
     ],
     location: "Ethiopia",
-    avatarUrl: "/src/assets/images/ssssssssssssss.jpg",
-    bgUrl: "/src/assets/images/portfolio_bg_1782834706463.jpg",
+    avatarUrl: ssssssssssssss,
+    bgUrl: portfolio_bg,
     aboutMeText: "I'm a Software Engineering student who enjoys building modern, user-friendly web applications that solve real-world problems. I have a strong interest in frontend development and creating responsive websites that look great and perform well across all devices.\n\nThrough personal projects and continuous learning, I've gained experience working with technologies like HTML, CSS, JavaScript, React, Tailwind CSS, Node.js, and modern development tools. I enjoy turning ideas into functional products, or exploring new web technologies.\n\nI'm always looking to improve my skills by taking on challenging projects, learning industry best practices, and staying up to date with modern software development. My goal is to build software that is not only visually appealing but also fast, accessible, maintainable, and meaningful for the people who use it.",
     yearsOfExperience: 2,
     completedProjects: 7,
@@ -89,7 +95,7 @@ export const defaultPortfolioData: PortfolioData = {
       id: "p1",
       title: "QR Attendance System",
       category: "Web App",
-      imageUrl: "/src/assets/images/qr_attendance_1782838206108.jpg",
+      imageUrl: qr_attendance,
       description: "A digital check-in platform utilizing dynamic QR code scanning, geolocation verification, and a live reporting dashboard for automated school/workspace attendance tracking.",
       technologies: ["React", "TypeScript", "Tailwind CSS", "HTML5 QR Scanner"],
       demoUrl: "https://example.com/demo",
@@ -99,7 +105,7 @@ export const defaultPortfolioData: PortfolioData = {
       id: "p2",
       title: "Digital Hotel Menu",
       category: "Mobile App",
-      imageUrl: "/src/assets/images/hotel_menu_1782838219123.jpg",
+      imageUrl: hotel_menu,
       description: "An elegant, interactive digital restaurant and hotel menu supporting contactless QR ordering, rich food item galleries, real-time cart customization, and smooth animations.",
       technologies: ["React", "Motion", "Tailwind CSS", "LocalStorage"],
       demoUrl: "https://example.com/agency",
@@ -109,7 +115,7 @@ export const defaultPortfolioData: PortfolioData = {
       id: "p3",
       title: "Digital Marketing Platform",
       category: "Productivity",
-      imageUrl: "/src/assets/images/marketing_platform_1782838233661.jpg",
+      imageUrl: marketing_platform,
       description: "A cohesive marketing automation dashboard showing live advertising campaign stats, dynamic SEO performance logs, conversion funnel analytics, and client reach metrics.",
       technologies: ["React", "TypeScript", "Tailwind CSS", "Recharts"],
       demoUrl: "https://example.com/pwa",
@@ -119,7 +125,7 @@ export const defaultPortfolioData: PortfolioData = {
       id: "p4",
       title: "YouTube Clone",
       category: "Web App",
-      imageUrl: "/src/assets/images/youtube_clone_1782838247057.jpg",
+      imageUrl: youtube_clone,
       description: "A high-fidelity video streaming site interface featuring custom video card layouts, responsive sidebar categories, a polished player UI, and interactive comments and reactions.",
       technologies: ["React", "TypeScript", "Tailwind CSS", "Lucide Icons"],
       demoUrl: "https://example.com/api",
