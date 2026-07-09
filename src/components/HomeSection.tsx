@@ -37,7 +37,7 @@ export default function HomeSection({ profile, onScrollToSection }: HomeSectionP
     // Handle lifecycle transitions
     if (!isDeleting && charIdx === currentFullTitle.length) {
       // Finished typing, wait before deleting
-      timer = setTimeout(() => setIsDeleting(true), 2500);
+      timer = setTimeout(() => setIsDeleting(true), 5000);
     } else if (isDeleting && charIdx === 0) {
       // Finished deleting, shift to next title
       setIsDeleting(false);

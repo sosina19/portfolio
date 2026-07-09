@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Project } from '../types';
 import { X, ExternalLink, Github, ZoomIn } from 'lucide-react';
+import ProjectDemos from './ProjectDemos';
 
 interface PortfolioSectionProps {
   projects: Project[];
@@ -9,6 +10,7 @@ interface PortfolioSectionProps {
 export default function PortfolioSection({ projects }: PortfolioSectionProps) {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [activeProject, setActiveProject] = useState<Project | null>(null);
+  const [activeDemo, setActiveDemo] = useState<string | null>(null);
 
   // Extract unique categories dynamically from projects
   const categories = ['All', ...Array.from(new Set(projects.map(p => p.category)))];
@@ -164,15 +166,16 @@ export default function PortfolioSection({ projects }: PortfolioSectionProps) {
                 {/* Actions Row */}
                 <div className="flex flex-wrap gap-4 pt-4 border-t border-gray-800/60">
                   {activeProject.demoUrl && (
-                    <a
-                      href={activeProject.demoUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1 min-w-[120px] flex items-center justify-center gap-2 px-4 py-3 bg-[#20c997] hover:bg-[#1baa80] text-[#111418] font-bold rounded-xl text-xs sm:text-sm shadow-md transition-colors duration-300"
+                    <button
+                      onClick={() => {
+                        setActiveDemo(activeProject.id);
+                        setActiveProject(null);
+                      }}
+                      className="flex-1 min-w-[120px] flex items-center justify-center gap-2 px-4 py-3 bg-[#20c997] hover:bg-[#1baa80] text-[#111418] font-bold rounded-xl text-xs sm:text-sm shadow-md transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
                     >
                       <ExternalLink size={16} />
                       <span>Live Demo</span>
-                    </a>
+                    </button>
                   )}
                   {activeProject.githubUrl && (
                     <a
@@ -190,6 +193,14 @@ export default function PortfolioSection({ projects }: PortfolioSectionProps) {
               </div>
             </div>
           </div>
+        )}
+
+        {/* Interactive In-App Demo Simulator Overlay */}
+        {activeDemo && (
+          <ProjectDemos
+            projectId={activeDemo}
+            onClose={() => setActiveDemo(null)}
+          />
         )}
 
       </div>
