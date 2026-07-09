@@ -108,7 +108,7 @@ export const defaultPortfolioData: PortfolioData = {
       imageUrl: hotel_menu,
       description: "An elegant, interactive digital restaurant and hotel menu supporting contactless QR ordering, rich food item galleries, real-time cart customization, and smooth animations.",
       technologies: ["React", "Motion", "Tailwind CSS", "LocalStorage"],
-      demoUrl: "https://example.com/agency",
+      demoUrl: "https://wow-burger-menu-inky.vercel.app/",
       githubUrl: "https://github.com"
     },
     {
@@ -118,7 +118,7 @@ export const defaultPortfolioData: PortfolioData = {
       imageUrl: marketing_platform,
       description: "A cohesive marketing automation dashboard showing live advertising campaign stats, dynamic SEO performance logs, conversion funnel analytics, and client reach metrics.",
       technologies: ["React", "TypeScript", "Tailwind CSS", "Recharts"],
-      demoUrl: "https://example.com/pwa",
+      demoUrl: "https://siltawi-digital-marketing-pi.vercel.app/",
       githubUrl: "https://github.com"
     },
     {

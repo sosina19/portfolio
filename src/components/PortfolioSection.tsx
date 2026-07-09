@@ -166,16 +166,28 @@ export default function PortfolioSection({ projects }: PortfolioSectionProps) {
                 {/* Actions Row */}
                 <div className="flex flex-wrap gap-4 pt-4 border-t border-gray-800/60">
                   {activeProject.demoUrl && (
-                    <button
-                      onClick={() => {
-                        setActiveDemo(activeProject.id);
-                        setActiveProject(null);
-                      }}
-                      className="flex-1 min-w-[120px] flex items-center justify-center gap-2 px-4 py-3 bg-[#20c997] hover:bg-[#1baa80] text-[#111418] font-bold rounded-xl text-xs sm:text-sm shadow-md transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
-                    >
-                      <ExternalLink size={16} />
-                      <span>Live Demo</span>
-                    </button>
+                    activeProject.id === 'p2' || activeProject.id === 'p3' ? (
+                      <a
+                        href={activeProject.demoUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 min-w-[120px] flex items-center justify-center gap-2 px-4 py-3 bg-[#20c997] hover:bg-[#1baa80] text-[#111418] font-bold rounded-xl text-xs sm:text-sm shadow-md transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
+                      >
+                        <ExternalLink size={16} />
+                        <span>Live Demo</span>
+                      </a>
+                    ) : (
+                      <button
+                        onClick={() => {
+                          setActiveDemo(activeProject.id);
+                          setActiveProject(null);
+                        }}
+                        className="flex-1 min-w-[120px] flex items-center justify-center gap-2 px-4 py-3 bg-[#20c997] hover:bg-[#1baa80] text-[#111418] font-bold rounded-xl text-xs sm:text-sm shadow-md transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
+                      >
+                        <ExternalLink size={16} />
+                        <span>Live Demo</span>
+                      </button>
+                    )
                   )}
                   {activeProject.githubUrl && (
                     <a

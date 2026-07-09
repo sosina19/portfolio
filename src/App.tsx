@@ -46,10 +46,10 @@ export default function App() {
               return { ...project, imageUrl: qr_attendance };
             }
             if (titleLower.includes('menu') || titleLower.includes('hotel') || titleLower.includes('food')) {
-              return { ...project, imageUrl: hotel_menu };
+              return { ...project, imageUrl: hotel_menu, demoUrl: "https://wow-burger-menu-inky.vercel.app/" };
             }
             if (titleLower.includes('marketing') || titleLower.includes('seo') || titleLower.includes('platform')) {
-              return { ...project, imageUrl: marketing_platform };
+              return { ...project, imageUrl: marketing_platform, demoUrl: "https://siltawi-digital-marketing-pi.vercel.app/" };
             }
             if (titleLower.includes('youtube') || titleLower.includes('video') || titleLower.includes('clone')) {
               return { ...project, imageUrl: youtube_clone };
